@@ -162,21 +162,37 @@ In the examples above, we have added all custom rules directly to `/custom/my-th
 **Note** The example assumes you are building a theme in the `/custom` directory of the full UIkit project. You can adapt these paths if you have set up your own build process.
 
 ```html
-custom/
+uikit/
 
-    <!-- entry file for Less compiler -->
-    my-theme.less
+    src/
 
-    <!-- folder with single Less files -->
-    my-theme/
+        <!-- folder with images for uikit core / uikit theme -->
+        images/
+            backgrounds/
+            components/
+            icons/
 
-        <!-- imports all components in this folder -->
-        _import.less
+        less/
+            components/
+            theme/
+            uikit.less
+            uikit.theme.less
 
-        <!-- one file per customized component -->
-        accordion.less
-        alert.less
-        ...
+    custom/
+
+        <!-- entry file for Less compiler -->
+        my-theme.less
+
+        <!-- folder with single Less files -->
+        my-theme/
+
+            <!-- imports all components in this folder -->
+            _import.less
+
+            <!-- one file per customized component -->
+            accordion.less
+            alert.less
+            ...
 ```
 
 The entry point for the Less compiler, `/custom/my-theme.less`:
